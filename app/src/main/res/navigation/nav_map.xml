@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_map"
+    app:startDestination="@id/fragmentGoodsOrder">
+
+    <fragment
+        android:id="@+id/fragmentCompetitors"
+        android:name="com.example.tam_tradeagent.views.FragmentCompetitors"
+        android:label="fragment_customer"
+        tools:layout="@layout/fragment_customer" >
+        <argument
+            android:name="id_customer"
+            app:argType="integer" />
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument android:name="email"
+            app:argType="string"/>
+        <argument android:name="phone"
+            app:argType="string"/>
+        <argument android:name="note"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_fragmentCompetitors_to_fragmentGoodsOrder"
+            app:destination="@id/fragmentGoodsOrder" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGoodsOrder"
+        android:name="com.example.tam_tradeagent.views.FragmentGoodsOrder"
+        android:label="recyclerview_orders"
+        tools:layout="@layout/recyclerview_orders" >
+        <action
+            android:id="@+id/action_fragmentGoodsOrder_to_fragmentAddEditGoods"
+            app:destination="@id/fragmentAddEditGoods2" />
+        <action
+            android:id="@+id/action_fragmentGoodsOrder_to_fragmentAddEditGoods2"
+            app:destination="@id/fragmentAddEditGoods2" />
+        <action
+            android:id="@+id/action_fragmentGoodsOrder_to_fragmentCompetitors"
+            app:destination="@id/fragmentCompetitors" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddEditGoods2"
+        android:name="com.example.tam_tradeagent.views.FragmentAddEditGoods"
+        android:label="add_goods"
+        tools:layout="@layout/add_goods" />
+</navigation>

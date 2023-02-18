@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">TAM-trade agent</string>
+    <string name="email_text">Email</string>
+    <string name="password_text">Password</string>
+    <string name="name_register_acc">Register account</string>
+    <string name="register_button">Register</string>
+    <string name="name_login_acc">Login</string>
+    <string name="link_forgot_password">Forgot password?</string>
+    <string name="link_register_from_login">Sign Up</string>
+    <string name="username_register">Username</string>
+    <string name="repeatpassword_text">Repeat password</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="number_order">00000</string>
+    <string name="name_customer">Name Surname</string>
+    <string name="phone_customer">Phone number</string>
+    <string name="goods">Goods</string>
+    <string name="total">Total</string>
+    <string name="departure_date">Departure date</string>
+    <string name="drawable_navigation">Menu navigation</string>
+
+    <string name="title_name">Customer name</string>
+    <string name="title_email">Email</string>
+    <string name="title_phone">Enter in the form: +380, min:8, max:20</string>
+    <string name="title_address">Address</string>
+    <string name="title_notes">Another notes</string>
+    <string name="add_customer_button">Add customer</string>
+
+    <string name="goods_goods">Goods</string>
+    <string name="amount_goods">Amount of goods</string>
+    <string name="customer_goods">Customer</string>
+    <string name="currentDate_goods">HH:MM:DD:MM:YY</string>
+    <string name="deliveryDate_goods">Delivery date</string>
+    <string name="address_goods">Address</string>
+    <string name="typeOfDelivery_goods">Type of delivery</string>
+    <string name="typeOfPrice_goods">Type of price</string>
+    <string name="price_goods">Price of one goods</string>
+    <string name="notes_goods">Another notes</string>
+    <string name="add_goods_button">Add goods</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

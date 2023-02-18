@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:fillViewport="true"
+    tools:context=".views.FragmentAddEditGoods">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="949dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar_goods"
+                android:layout_above="@id/goods_amount"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/orders"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/goods_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar_goods"
+                android:layout_toEndOf="@+id/image_goods"
+                android:layout_marginStart="5dp"
+                android:hint="@string/goods"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="19sp"
+                app:backgroundTint="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_goods"
+                android:layout_above="@id/goods_goodsNameCustomer"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/amount" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/goods_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goods_name"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/image_goods"
+                android:hint="@string/amount_goods"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="19sp"
+                app:backgroundTint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_name_customer"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_amount"
+                android:layout_above="@id/goods_goodsPhoneCustomer"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/cusotmer" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/goods_goodsNameCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goods_amount"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/image_name_customer"
+                android:layout_marginTop="15dp"
+                android:layout_toStartOf="@+id/update_deliveryName_goods"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15sp"
+                app:backgroundTint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/update_deliveryName_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/goods_goodsPhoneCustomer"
+                android:layout_below="@+id/goods_amount"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/upadate_image" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_phone_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/image_name_customer"
+                android:layout_above="@id/currentDate_goods"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/phone_number" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/goods_goodsPhoneCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goods_goodsNameCustomer"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/image_name_customer"
+                android:layout_toStartOf="@+id/update_deliveryPhone_goods"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15sp"
+                app:backgroundTint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/update_deliveryPhone_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_above="@id/currentDate_goods"
+                android:layout_below="@+id/goods_goodsNameCustomer"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/upadate_image" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_current_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/image_phone_customer"
+                android:layout_above="@id/deliveryDate_goods"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/current_data" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/currentDate_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goods_goodsPhoneCustomer"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/image_current_data"
+                android:focusable="false"
+                android:hint="@string/currentDate_goods"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:layout_marginTop="15dp"
+                android:textSize="19sp"
+                app:backgroundTint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_delivery_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_current_data"
+                android:layout_above="@id/address_goods"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/delivery_date" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/deliveryDate_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/currentDate_goods"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/image_delivery_data"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="@string/deliveryDate_goods"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="19sp"
+                app:backgroundTint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_delivery_data"
+                android:layout_above="@id/typeOf_delivery_goods"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/address" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/address_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/deliveryDate_goods"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/image_address"
+                android:hint="@string/address_goods"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="19sp"
+                app:backgroundTint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_type_of_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/image_address"
+                android:layout_above="@id/typeOf_price_goods"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/delivery_type" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/typeOf_delivery_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address_goods"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/image_type_of_delivery"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="@string/typeOfDelivery_goods"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="19sp"
+                app:backgroundTint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_type_of_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_type_of_delivery"
+                android:layout_above="@id/price_goods"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/type_price" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/typeOf_price_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/typeOf_delivery_goods"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/image_type_of_delivery"
+                android:clickable="true"
+                android:focusable="true"
+                android:hint="@string/typeOfPrice_goods"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="19sp"
+                app:backgroundTint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/typeOf_price_goods"
+                android:layout_above="@+id/notes_goods"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/notes_goods"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/price_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/typeOf_price_goods"
+                android:layout_marginTop="15dp"
+                android:hint="@string/price_goods"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/image_price"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="19sp"
+                app:backgroundTint="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/notes_goods"
+                app:layout_constraintStart_toEndOf="@id/image_price" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/notes_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/button_goods"
+                android:layout_below="@id/price_goods"
+                android:gravity="start|top"
+                android:hint="@string/notes_goods"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/button_goods"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="17sp"
+                app:backgroundTint="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="@string/add_goods_button"
+                android:textColor="@color/white"
+                android:background="@color/black_purple"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp" />
+
+        </RelativeLayout>
+    </TableLayout>
+</androidx.core.widget.NestedScrollView>
